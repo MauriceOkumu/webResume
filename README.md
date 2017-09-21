@@ -1,7 +1,7 @@
 # webResume
  WELCOME
 
- #Setup
+ Setup
  ```yarn install```
 
  Alternatively
