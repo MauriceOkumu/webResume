@@ -2,8 +2,9 @@ console.log('Hello world');
 import React from 'react';
 import { render } from 'react-dom';
 import Counter from './Counter';
-import Portfolio from './Portfolio.js';
-import About from './About.js'
+import Portfolio from './Portfolio';
+import About from './About';
+import Connect from './Connect'
  
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class App extends React.Component {
         <Counter />
         <About />
         <Portfolio data={this.state}/>
+        <Connect />
       </div>
     );
   }
