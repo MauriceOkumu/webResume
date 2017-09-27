@@ -1,10 +1,10 @@
 console.log('Hello world');
 import React from 'react';
 import { render } from 'react-dom';
-import Counter from './Counter';
-import Portfolio from './Portfolio';
-import About from './About';
-import Connect from './Connect'
+import Portfolio from './Portfolio.jsx';
+import About from './About.jsx';
+import Connect from './Connect.jsx';
+import Navbar from './Navbar.jsx';
  
 class App extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Counter />
+        <Navbar />
         <About />
         <Portfolio data={this.state}/>
         <Connect />
