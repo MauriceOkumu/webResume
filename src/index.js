@@ -20,13 +20,13 @@ class App extends Component {
   render() {
     return (
       <main>
-      <Navbar />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/connect" component={Connect} />
-        <Route path="/portfolio" component={Portfolio} /> 
-        <Redirect to="/" />
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/connect" component={Connect} />
+          <Route path="/portfolio" component={Portfolio} /> 
+          <Redirect to="/" />
       </Switch>
     </main>
     );
