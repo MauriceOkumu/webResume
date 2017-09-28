@@ -7,6 +7,7 @@ const NavBarIn = () => (
     <div className="container">
       <div id="navbar" className="collapse navbar-collapse">
         <ul className="nav navbar-nav navbar-right">
+          <li><Link to="/home">Home</Link></li>
           <li><Link to="/about">About Me</Link></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
           <li><Link to="/connect">Connect Me</Link></li>
