@@ -5,6 +5,7 @@ import Portfolio from './Portfolio.jsx';
 import About from './About.jsx';
 import Connect from './Connect.jsx';
 import Navbar from './Navbar.jsx';
+import Home from './Home.jsx';
  
 class App extends Component {
   constructor(props) {
@@ -19,8 +20,9 @@ class App extends Component {
   render() {
     return (
       <main>
+      <Navbar />
       <Switch>
-        <Route path="/" exact component={Navbar} />
+        <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/connect" component={Connect} />
         <Route path="/portfolio" component={Portfolio} /> 
