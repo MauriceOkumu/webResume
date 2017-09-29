@@ -10,7 +10,8 @@ const NavBarIn = () => (
           <li><Link to="/home">Home</Link></li>
           <li><Link to="/about">About Me</Link></li>
           <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/connect">Connect Me</Link></li>
+          <li><Link to="/connect">Connect With Me</Link></li>
+          <li><Link to="/counter">Like the website</Link></li>
         </ul>
       </div>
     </div>
