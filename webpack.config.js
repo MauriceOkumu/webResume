@@ -48,6 +48,7 @@ module.exports = {
     modules: [
       path.join(__dirname, 'node_modules'),
     ],
+     extensions: [ '.js', '.jsx']
   },
   plugins:[ 
     new ExtractWebPlugin('styles.css') 
