@@ -1,7 +1,7 @@
 import { INCREASE_COUNT, DECREASE_COUNT } from '../actions/actions.js';
 
 
-export default function LikeCurrentReducer(state=0, action) {
+export default function LikeCurrentReducer(state=8, action) {
   const current = state;
   switch(action.type){
     case INCREASE_COUNT:

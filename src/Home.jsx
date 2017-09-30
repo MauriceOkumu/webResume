@@ -10,6 +10,7 @@ class Home extends Component {
     return (
       <div>
         <h3>My Home will be rendered and shown here.</h3>
+        <h2>Home is the best place to be</h2>
       </div>
     );
   
