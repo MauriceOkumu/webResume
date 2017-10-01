@@ -1,9 +1,15 @@
 import React,{ Component } from 'react';
 
+
 const Connect = () => {
 	return (
 		<div>
-		All connections will go here
+		  <ul>
+		  <li><a href="#">Github</a></li>
+		  <li><a href="#">twitter</a></li>
+		  <li><a href="#">linkedin</a></li>
+		  <li><a href="#">email</a></li>
+		  </ul>
 		</div>
 		)
 }
