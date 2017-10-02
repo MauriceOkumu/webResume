@@ -8,6 +8,7 @@ class About extends Component {
     return (
       <div>
         This is where i will talk about myself.
+        Will go on and on
       </div>
     );
   }
