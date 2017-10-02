@@ -95,7 +95,7 @@ the additional commits you have with:
 git hist
 ```
 
-Note: If you don't have the `git hist` alias, open your .gitconfig file and
+ If you don't have the `git hist` alias, open your .gitconfig file and
 add the following alias:
 ```bash
 [alias]
