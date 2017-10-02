@@ -10,6 +10,13 @@ class Portfolio extends Component {
     return (
       <div>
         My Portfolio will be rendered and shown here.
+        <ul>
+          <li>Snapflix</li>
+          <li>Llama</li>
+          <li>Hran</li>
+          <li>Gamefest</li>
+          <li>My Website</li>
+        </ul>
       </div>
     );
   
