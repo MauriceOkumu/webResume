@@ -30,5 +30,5 @@ const server = app.listen(port, function() {
   const host = server.address().address;
   const port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port);
-   console.log(process.env.NODE_ENV)
+   console.log('Environment var ',process.env.NODE_ENV)
 });
