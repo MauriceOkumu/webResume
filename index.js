@@ -2,7 +2,7 @@ const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware')
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.config.js')();
+const webpackConfig = require('./webpack.config.prod.js');
 const path = require('path');
 const app = express();
 const port =  3000;
@@ -30,5 +30,5 @@ const server = app.listen(port, function() {
   const host = server.address().address;
   const port = server.address().port;
   console.log('Example app listening at http://%s:%s', host, port);
-   // console.log(process.env.NODE_ENV)
+   console.log(process.env.NODE_ENV)
 });
