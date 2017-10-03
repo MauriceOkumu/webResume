@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const ExtractWebPlugin = require('extract-text-webpack-plugin');
 const combineLoaders = require('webpack-combine-loaders');
  
-module.exports = () => {
+module.exports = (env) => {
   const config = {
   context: path.join(__dirname, 'src'),
   entry: [
