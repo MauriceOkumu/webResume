@@ -2,9 +2,10 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractWebPlugin = require('extract-text-webpack-plugin');
 const combineLoaders = require('webpack-combine-loaders');
- 
-module.exports = (env) => {
-  console.log(env)
+
+ // const ENVIRONMENT = process.env.NODE_ENV;
+module.exports = () => {
+  // console.log(env)
   const config = {
   context: path.join(__dirname, 'src'),
   entry: [
@@ -49,6 +50,9 @@ module.exports = (env) => {
      extensions: [ '.js', '.jsx']
   },
   plugins:[ 
+     new webpack.EnvironmentPlugin([
+      'NODE_ENV',
+    ]),
     new ExtractWebPlugin('styles.css'),
     new webpack.HotModuleReplacementPlugin(),
     // Use NoErrorsPlugin for webpack 1.x
