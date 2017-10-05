@@ -2,22 +2,19 @@ const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware')
 const webpack = require('webpack');
-// const webpackConfig = require('./webpack.config.prod.js');
+const cors = require('cors');
 const path = require('path');
 const app = express();
 const port =  3000;
- var webpackConfig = null;
-
-if (process.env.NODE_ENV !=='production') {
-   process.env.NODE_ENV = 'development';
-   webpackConfig = require('./webpack.config.dev.js')(); 
-  }else{
-    webpackConfig = require('./webpack.config.prod.js');
-  }
+const bodyParser = require('body-parser');
+const webpackConfig = require('./webpack.js').webpackConfig;
 
 const compiler = webpack(webpackConfig);
- console.log('yaye')
+
 app.use(express.static(__dirname + '/static'));
+app.use('*', cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
 app.use(webpackDevMiddleware(compiler, {
