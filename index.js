@@ -2,14 +2,21 @@ const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware')
 const webpack = require('webpack');
-const webpackConfig = require('./webpack.config.js')();
+// const webpackConfig = require('./webpack.config.prod.js');
 const path = require('path');
 const app = express();
 const port =  3000;
-require('dotenv').config()
- 
+ var webpackConfig = null;
+
+if (process.env.NODE_ENV !=='production') {
+   process.env.NODE_ENV = 'development';
+   webpackConfig = require('./webpack.config.dev.js')(); 
+  }else{
+    webpackConfig = require('./webpack.config.prod.js');
+  }
+
 const compiler = webpack(webpackConfig);
- 
+ console.log('yaye')
 app.use(express.static(__dirname + '/static'));
 
 
