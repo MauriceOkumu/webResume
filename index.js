@@ -4,17 +4,19 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const webpack = require('webpack');
 const cors = require('cors');
 const path = require('path');
-const app = express();
-const port =  3000;
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const webpackConfig = require('./webpack.js').webpackConfig;
 
+const app = express();
+const port =  3000;
 const compiler = webpack(webpackConfig);
 
 app.use(express.static(__dirname + '/static'));
 app.use('*', cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(morgan('combined'));
 
 
 app.use(webpackDevMiddleware(compiler, {
