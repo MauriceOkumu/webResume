@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const ExtractWebPlugin = require('extract-text-webpack-plugin');
 const combineLoaders = require('webpack-combine-loaders');
+const { removeEmpty } = require('webpack-config-utils');
 
  // const ENVIRONMENT = process.env.NODE_ENV;
 module.exports = () => {
@@ -49,7 +50,7 @@ module.exports = () => {
     ],
      extensions: [ '.js', '.jsx']
   },
-  plugins:[ 
+  plugins:removeEmpty ([ 
      new webpack.EnvironmentPlugin([
       'NODE_ENV',
     ]),
@@ -57,7 +58,7 @@ module.exports = () => {
     new webpack.HotModuleReplacementPlugin(),
     // Use NoErrorsPlugin for webpack 1.x
     new webpack.NoEmitOnErrorsPlugin() 
-  ]
+  ])
 };
 return config;
 };
