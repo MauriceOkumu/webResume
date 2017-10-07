@@ -50,5 +50,9 @@
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.19.1",
     "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "file-loader": "^1.1.5",
+    "url-loader": "^0.6.2"
   }
 }
