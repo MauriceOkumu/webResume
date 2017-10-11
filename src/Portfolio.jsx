@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import fakeData from './fakeData/modalData.jsx';
  
 class Portfolio extends Component {
   constructor(props) {
@@ -6,16 +7,12 @@ class Portfolio extends Component {
   }
  
   render() {
-   //let { title, url, src } = this.props.data
+    const data = fakeData();
     return (
       <div>
         My Portfolio will be rendered and shown here.
         <ul>
-          <li>Snapflix</li>
-          <li>Llama</li>
-          <li>Hran</li>
-          <li>Gamefest</li>
-          <li>My Website</li>
+        {data.map((element, index) => <li key={index}>{element.name}</li>)}
         </ul>
       </div>
     );
@@ -23,7 +20,4 @@ class Portfolio extends Component {
   }
 }
 export default Portfolio;
-        // <h1>{title}</h1>
-        // <img src={url} alt="pictures of the works will be shown here" />
-        // <br/>
-        // <a href={src}>link to pictures</a>
+        
