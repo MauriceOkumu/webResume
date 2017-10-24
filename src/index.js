@@ -22,7 +22,6 @@ class App extends Component {
     	title:'Let us build a web app',
     	url:'http://www.google.com',
     	src:'http://www.codeacademy.com',
-      counter: 0
     }
   }
  
