@@ -11,6 +11,7 @@ class About extends Component {
         This is where i will talk about myself.
         Will go on and on<br/>
         <img src={Pic} height="300" width="300" alt="Family picture" />
+        
       </div>
     );
   }
