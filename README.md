@@ -2,7 +2,7 @@
  WELCOME
 
  Usage
----
+--------
  
 Start the development server with this command:
  
@@ -21,5 +21,10 @@ npm start
  ```npm install```
 
  Compile
-
+---------
  ```webpack```
+
+ Generate a minified build file for deployment
+------------------------------------------------
+
+ ```webpack --config webpack.config.prod.js -p```
