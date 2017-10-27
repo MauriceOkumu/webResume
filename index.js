@@ -7,6 +7,7 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const webpackConfig = require('./webpack.js').webpackConfig;
+const db = require('./backend/database')
 
 const app = express();
 const port =  3000;
