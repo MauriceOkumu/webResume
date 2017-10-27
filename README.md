@@ -28,3 +28,11 @@ npm start
 ------------------------------------------------
 
  ```webpack --config webpack.config.prod.js -p```
+
+ Database start
+ In the command line type
+
+ ```mysql -u root```
+ ```create table website ```
+ ```use website```
+ ```quit``` to close the database connection
